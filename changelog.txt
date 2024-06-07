@@ -1,0 +1,5 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.0
+Date: 1970-01-01
+  Info:
+    - currently an empty mod, this version is only here to mark the start date of the project

@@ -1,0 +1,14 @@
+{
+    "title": "factorio-mod-template",
+    "name": "factorio-mod-template",
+    "author": "asvdev(in game - Dial-up)",
+    "factorio_version": "1.1",
+    "version": "0.0.0",
+    "dependencies": ["base >= 1.1.0"],
+    "description": "factorio-mod-template - template for my mods",
+    "homepage": "https://github.com/asvdvl/factorio-mod-template",
+    "package":{
+        "ignore":[
+        ]
+    }
+}
