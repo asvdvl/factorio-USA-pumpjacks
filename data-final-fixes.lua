@@ -1,3 +1,8 @@
+local fssm
+if settings.startup["fssm-parent_name"] then
+    fssm = require("__factorio-sync-sound-manager__/prototypes/api")
+end
+
 local soundpack_work = {}
 local soundpack_idle = {}
 local arrays = {
@@ -11,22 +16,28 @@ local arrays = {
     }
 }
 
-for _, value in pairs(arrays) do
+for _, soundpack in pairs(arrays) do
     for i = 1, 2 do
-        table.insert(value.array,
+        table.insert(soundpack.array,
         {
             filename = "__factorio-USA-pumpjacks__/sound/pumpjack-"..tostring(i)..".ogg",
-            volume = settings.startup[value.setting].value/100
+            volume = settings.startup[soundpack.setting].value/100
         })
     end
 end
-for key, value in pairs(data.raw["mining-drill"]) do
-    if string.find(key, "pumpjack") then
-        value.working_sound.sound = {
+for name, pump in pairs(data.raw["mining-drill"]) do
+    if string.find(name, "pumpjack") then
+        pump.working_sound.sound = {
             variations = soundpack_work
         }
-        value.working_sound.idle_sound = {
+        pump.working_sound.idle_sound = {
             variations = soundpack_idle
         }
+        if fssm then
+            pump.working_sound.speacker_audible_distance_modifier = pump.working_sound.audible_distance_modifier
+            pump.working_sound.audible_distance_modifier = 0
+            fssm.registerPrototype(pump)
+        end
     end
+    
 end

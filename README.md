@@ -1,5 +1,7 @@
 # factorio-USA-pumpjacks - Factorio meme mod that simply replaces the sound of pumpjacks with the “canonical” US anthem with accompanying sounds.
 
+## If you want the music to be synchronized between machines, install [this](https://mods.factorio.com/mod/factorio-sync-sound-manager) optional mod (you can find it in the dependencies list in the game).
+
 Disclaimer: 
 My mod is not intended to offend anyone and is created solely for humorous purposes.
 
