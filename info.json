@@ -2,11 +2,11 @@
     "title": "USA pumpjacks",
     "name": "factorio-USA-pumpjacks",
     "author": "asvdev(in game - Dial-up)",
-    "factorio_version": "1.1",
-    "version": "0.1.1",
+    "factorio_version": "2.0",
+    "version": "0.2.0",
     "dependencies": [
         "base >= 1.0.0",
-        "? factorio-sync-sound-manager"
+        "? factorio-sync-sound-manager>=1.0.0"
     ],
     "description": "Factorio meme mod that simply replaces the sound of pumpjacks with the “canonical” US anthem with accompanying sounds",
     "homepage": "https://github.com/asvdvl/factorio-USA-pumpjacks",

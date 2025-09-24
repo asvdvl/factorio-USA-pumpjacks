@@ -34,10 +34,10 @@ for name, pump in pairs(data.raw["mining-drill"]) do
             variations = soundpack_idle
         }
         if fssm then
-            pump.working_sound.speacker_audible_distance_modifier = pump.working_sound.audible_distance_modifier
-            pump.working_sound.audible_distance_modifier = 0
+            sound = pump.working_sound.sound
+            sound.speaker_audible_distance_modifier = sound.audible_distance_modifier
+            sound.audible_distance_modifier = 0
             fssm.registerPrototype(pump)
         end
     end
-    
 end
